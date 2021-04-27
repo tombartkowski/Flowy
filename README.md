@@ -1,6 +1,6 @@
 # Flowy
 
-[![CI Status](https://img.shields.io/travis/tombartkowski/Flowy.svg?style=flat)](https://travis-ci.org/tombartkowski/Flowy)
+[![CI Status](https://img.shields.io/travis/Tomasz Bartkowski/Flowy.svg?style=flat)](https://travis-ci.org/Tomasz Bartkowski/Flowy)
 [![Version](https://img.shields.io/cocoapods/v/Flowy.svg?style=flat)](https://cocoapods.org/pods/Flowy)
 [![License](https://img.shields.io/cocoapods/l/Flowy.svg?style=flat)](https://cocoapods.org/pods/Flowy)
 [![Platform](https://img.shields.io/cocoapods/p/Flowy.svg?style=flat)](https://cocoapods.org/pods/Flowy)
@@ -22,7 +22,7 @@ pod 'Flowy'
 
 ## Author
 
-tombartkowski, t-bartkowski@american-systems.pl
+Tomasz Bartkowski
 
 ## License
 

@@ -1,0 +1,44 @@
+PODS:
+  - Flowy (0.1.0):
+    - RxCocoa
+    - RxSwift
+    - RxSwiftExt
+  - RxCocoa (6.1.0):
+    - RxRelay (= 6.1.0)
+    - RxSwift (= 6.1.0)
+  - RxRelay (6.1.0):
+    - RxSwift (= 6.1.0)
+  - RxSwift (6.1.0)
+  - RxSwiftExt (6.0.1):
+    - RxSwiftExt/Core (= 6.0.1)
+    - RxSwiftExt/RxCocoa (= 6.0.1)
+  - RxSwiftExt/Core (6.0.1):
+    - RxSwift (~> 6.0)
+  - RxSwiftExt/RxCocoa (6.0.1):
+    - RxCocoa (~> 6.0)
+    - RxSwiftExt/Core
+
+DEPENDENCIES:
+  - Flowy (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - RxSwiftExt
+
+EXTERNAL SOURCES:
+  Flowy:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Flowy: 02aa3c187bf9c8128b4e5c5b59431725a8ba72fe
+  RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
+  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  RxSwiftExt: d61c4b9b06e0a448041b1c659e0f1b5c5a035afc
+
+PODFILE CHECKSUM: 5cf7c07cbf9b1c534d5838e6fb28466518e25a0e
+
+COCOAPODS: 1.10.1

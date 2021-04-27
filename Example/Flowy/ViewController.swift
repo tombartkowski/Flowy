@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Flowy
 //
-//  Created by tombartkowski on 04/27/2021.
-//  Copyright (c) 2021 tombartkowski. All rights reserved.
+//  Created by Tomasz Bartkowski on 04/27/2021.
+//  Copyright (c) 2021 Tomasz Bartkowski. All rights reserved.
 //
 
 import UIKit

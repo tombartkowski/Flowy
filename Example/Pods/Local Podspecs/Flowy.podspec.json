@@ -1,0 +1,32 @@
+{
+  "name": "Flowy",
+  "version": "0.1.0",
+  "summary": "Reactive, event-driven coordination in Swift.",
+  "homepage": "https://github.com/tombartkowski/Flowy",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "tombartkowski": "tomaszbartkowski.studio@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/tombartkowski/Flowy.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "Flowy/Classes/**/*",
+  "dependencies": {
+    "RxSwift": [
+
+    ],
+    "RxSwiftExt": [
+
+    ],
+    "RxCocoa": [
+
+    ]
+  }
+}

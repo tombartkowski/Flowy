@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		00F73EF0472C1DABEF74A9D8 /* Pods_Flowy_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flowy_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FE4A13A847FA795530386D /* Pods-Flowy_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flowy_Example.debug.xcconfig"; path = "Target Support Files/Pods-Flowy_Example/Pods-Flowy_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		3751E003DF479FB88F372387 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		3751E003DF479FB88F372387 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Flowy_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flowy_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,8 +44,8 @@
 		619CD9710EE5D445A9EFFE06 /* Pods-Flowy_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flowy_Tests.release.xcconfig"; path = "Target Support Files/Pods-Flowy_Tests/Pods-Flowy_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6D2F8552057BDF931241B4B4 /* Pods-Flowy_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flowy_Example.release.xcconfig"; path = "Target Support Files/Pods-Flowy_Example/Pods-Flowy_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9B58D7FF89C985802B60D53F /* Pods_Flowy_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flowy_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B25A30469BC3D389E7DD2E71 /* Flowy.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Flowy.podspec; path = ../Flowy.podspec; sourceTree = "<group>"; };
-		BA7B32F0AA140E9AE0B95F0E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B25A30469BC3D389E7DD2E71 /* Flowy.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Flowy.podspec; path = ../Flowy.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BA7B32F0AA140E9AE0B95F0E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FC4B1A61EC6FABB1AD6464DA /* Pods-Flowy_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flowy_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Flowy_Tests/Pods-Flowy_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +156,6 @@
 				FC4B1A61EC6FABB1AD6464DA /* Pods-Flowy_Tests.debug.xcconfig */,
 				619CD9710EE5D445A9EFFE06 /* Pods-Flowy_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -292,10 +292,18 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Flowy_Example/Pods-Flowy_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Flowy/Flowy.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flowy.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
