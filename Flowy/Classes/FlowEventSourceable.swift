@@ -1,6 +1,6 @@
 //
 //  FlowEventSourcable.swift
-//  Textail
+//  Flowy
 //
 //  Created by Tomasz Bartkowski on 07/04/2021.
 //

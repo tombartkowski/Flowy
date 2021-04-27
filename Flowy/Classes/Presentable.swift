@@ -1,6 +1,6 @@
 //
 //  Presentable.swift
-//  Textail
+//  Flowy
 //
 //  Created by Tomasz Bartkowski on 05/04/2021.
 //

@@ -97,7 +97,7 @@ class FlowCoordinator {
     private func nextFlowCoordinator(for flowEvent: FlowEvent) -> FlowCoordinator? {
         guard let flowType = flow.nextFlowType(for: flowEvent) else { return nil }
 
-        let factoryKey = String(describing: flowType.self) + (flowEvent.flowName ?? "")
+        let factoryKey = String(describing: flowType.self) + (flowEvent.transitionKey ?? "")
         guard let flowFactoryClosure = flowFactory[factoryKey] else { return nil }
 
         let nextFlow = flowFactoryClosure(flow.presentable)

@@ -9,7 +9,7 @@
 
 public protocol FlowEvent {
     func isEqualTo(_ other: FlowEvent) -> Bool
-    var flowName: String? { get }
+    var transitionKey: String? { get }
 }
 
 public extension FlowEvent where Self: Equatable {
@@ -19,7 +19,7 @@ public extension FlowEvent where Self: Equatable {
 }
 
 public extension FlowEvent {
-    var flowName: String? {
+    var transitionKey: String? {
         return nil
     }
 }

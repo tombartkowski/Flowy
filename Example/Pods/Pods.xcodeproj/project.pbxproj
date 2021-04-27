@@ -184,7 +184,7 @@
 		7B78E668865DBEB09ECC5E6FDB6BFF80 /* toSortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BC767FD1D0B73261391704EF1B600A /* toSortedArray.swift */; };
 		7BB4C3B1CE2479D86DE286AF705E05DE /* Signal+Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A37853A9E1BF576F98DAB7A6A19D6E /* Signal+Subscription.swift */; };
 		7BEDE369EB61AC46BFA221D01DF4019F /* UIApplication+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C251DB0570FDBA9678FB5ABC371FBAC /* UIApplication+Rx.swift */; };
-		7CD9C4258FBC750BE56B32D2008929D2 /* ReactiveFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA45D39827177B42AB27F52A67179D /* ReactiveFlow.swift */; };
+		7CD9C4258FBC750BE56B32D2008929D2 /* Flowy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA45D39827177B42AB27F52A67179D /* Flowy.swift */; };
 		7E22607588772F52EA2CCA494AB30521 /* Completable+AndThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79843573FD7F7265190C650917D1A1EF /* Completable+AndThen.swift */; };
 		7EA72350711AB11926C5972CFA21FCF0 /* RxCollectionViewReactiveArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EEA8936CC8CFC41E9B5F82BC126056 /* RxCollectionViewReactiveArrayDataSource.swift */; };
 		7F50C89001543B3CAAB0727FA178CFB9 /* BinaryDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5CBDDC6F1020DCAF061B4462C0D21 /* BinaryDisposable.swift */; };
@@ -750,7 +750,7 @@
 		BC45DC1C38D6B18F7BFB22361321D131 /* ControlProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ControlProperty.swift; path = RxCocoa/Traits/ControlProperty.swift; sourceTree = "<group>"; };
 		BD1F779063CD11216B5CED0902D4540A /* Timeout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeout.swift; path = RxSwift/Observables/Timeout.swift; sourceTree = "<group>"; };
 		BD2B62A2383EB00EECD7FB676D611B9C /* Signal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Signal.swift; path = RxCocoa/Traits/Signal/Signal.swift; sourceTree = "<group>"; };
-		BDDA45D39827177B42AB27F52A67179D /* ReactiveFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReactiveFlow.swift; path = Flowy/Classes/ReactiveFlow.swift; sourceTree = "<group>"; };
+		BDDA45D39827177B42AB27F52A67179D /* Flowy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Flowy.swift; path = Flowy/Classes/Flowy.swift; sourceTree = "<group>"; };
 		BE227416E5282766B386FC02D30FCCE6 /* Pods-Flowy_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Flowy_Tests-umbrella.h"; sourceTree = "<group>"; };
 		BE9B49078CD9171436C53F7884B05A6E /* RxSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RxSwift-prefix.pch"; sourceTree = "<group>"; };
 		C003D16CEFF24097D69F1A0FD061020A /* OperationQueueScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OperationQueueScheduler.swift; path = RxSwift/Schedulers/OperationQueueScheduler.swift; sourceTree = "<group>"; };
@@ -1488,7 +1488,7 @@
 				3D144369E4E1321B1344C5AB914926B6 /* NavigationFlow.swift */,
 				C0D4FCC2A879065F19ABD76CDB846312 /* Presentable.swift */,
 				8A195360AFE0C9882214AC4D68F701AF /* Presentable+UIViewController.swift */,
-				BDDA45D39827177B42AB27F52A67179D /* ReactiveFlow.swift */,
+				BDDA45D39827177B42AB27F52A67179D /* Flowy.swift */,
 				53ADEBCA9364050E010CA08132B56A6B /* RootPresentable.swift */,
 				22A1DBAECE2BFC373EEA3105BD02BF7B /* TabBarFlow.swift */,
 				9393CBF9AE7067C4F32624A627A37970 /* TabBarFlowCoordinator.swift */,
@@ -1827,7 +1827,7 @@
 				363C35A8AEBAC3ABA576B0475B54285B /* NavigationFlow.swift in Sources */,
 				0A0BF48D6D29AD2744B1C8258AD6C539 /* Presentable+UIViewController.swift in Sources */,
 				6B5582CE784FE8449AA5920DC7903FDD /* Presentable.swift in Sources */,
-				7CD9C4258FBC750BE56B32D2008929D2 /* ReactiveFlow.swift in Sources */,
+				7CD9C4258FBC750BE56B32D2008929D2 /* Flowy.swift in Sources */,
 				D52C1E6CD47A3B0EDDAF4D9A12835F47 /* RootPresentable.swift in Sources */,
 				D2446EAA55FD54F082BC3B907E2DA20B /* TabBarFlow.swift in Sources */,
 				034C375B173389DDEE7C8EF1BD61F509 /* TabBarFlowCoordinator.swift in Sources */,
