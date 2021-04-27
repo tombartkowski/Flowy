@@ -1,6 +1,5 @@
 //
 //  Flow.swift
-
 //
 //  Created by Tomasz Bartkowski on 21/04/2021.
 //  Copyright © 2021 Tomasz Bartkowski. All rights reserved.
@@ -11,7 +10,7 @@ import UIKit.UIViewController
 open class Flow {
     // MARK: Lifecycle
 
-    required public init(presentableParent: Presentable?, presentable: Presentable) {
+    public required init(presentableParent: Presentable?, presentable: Presentable) {
         self.presentableParent = presentableParent
         self.presentable = presentable
     }

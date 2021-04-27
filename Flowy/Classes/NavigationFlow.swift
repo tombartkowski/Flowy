@@ -1,6 +1,5 @@
 //
 //  NavigationFlow.swift
-
 //
 //  Created by Tomasz Bartkowski on 22/04/2021.
 //  Copyright © 2021 Tomasz Bartkowski. All rights reserved.
@@ -11,7 +10,7 @@ import UIKit.UINavigationController
 open class NavigationFlow: Flow {
     // MARK: Lifecycle
 
-    convenience init(
+    public convenience init(
         navigationController: UINavigationController = UINavigationController(),
         presentingPresentable: Presentable? = nil,
         presentable: Presentable
@@ -27,7 +26,7 @@ open class NavigationFlow: Flow {
 
     // MARK: Open
 
-    open var navigationController: UINavigationController = UINavigationController()
+    open var navigationController = UINavigationController()
 
     override open func present(completion: (() -> Void)? = nil) throws {
         if let presentingPresentable = presentingPresentable {

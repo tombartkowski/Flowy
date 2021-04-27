@@ -1,10 +1,11 @@
 //
 //  FlowEvent.swift
-
 //
 //  Created by Tomasz Bartkowski on 21/04/2021.
 //  Copyright © 2021 Tomasz Bartkowski. All rights reserved.
 //
+
+// MARK: - FlowEvent
 
 public protocol FlowEvent {
     func isEqualTo(_ other: FlowEvent) -> Bool
@@ -13,7 +14,7 @@ public protocol FlowEvent {
 
 public extension FlowEvent where Self: Equatable {
     func isEqualTo(_ other: FlowEvent) -> Bool {
-        return (other as? Self).flatMap({ $0 == self }) ?? false
+        return (other as? Self).flatMap { $0 == self } ?? false
     }
 }
 
