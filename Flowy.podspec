@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Flowy'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'Reactive, event-driven coordination in Swift.'
   s.homepage         = 'https://github.com/tombartkowski/Flowy'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
