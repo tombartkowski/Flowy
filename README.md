@@ -78,6 +78,8 @@ flowy.registerFlow(DetailFlow.self) { root -> DetailFlow in
   )
 }
 
+flowy.start()
+
 //This will perform a transition MasterFlow -> DetailFlow
 DefaultEventsSource.shared.events.onNext(MyFlowEvent.detailRequired)
 ```
@@ -107,16 +109,16 @@ Flowy works with `Flows` and `FlowEvents`.
 
 You can think of a `Flow` as a `UIViewController`, or rather an object that references it and the `UIViewController` that presented it.
 
-Each `Flow` defines a map of `FlowEvents` to `Flow` which specifies which `Flow` to transition to on a given `FlowEvent`.
+Each `Flow` defines a map of `FlowEvents` to `Flows` which specifies which `Flow` to transition to on a given `FlowEvent`.
 `Flow` also defines a list of `FlowEvents` that dissmis the `Flow` when emitted.
 
 ### Defining Flows
 
-To create a basic `Flow` simply create a subclass of `Flow`.
+To create a basic `Flow` simply create a subclass of the `Flow`.
 
 ```swift
 import Flowy
-class MasterDetail: Flow {
+class MasterFlow: Flow {
   override func nextFlowType(for event: FlowEvent) -> FlowType? {
     if case event = MyFlowEvent.detailRequired {
       return DetailFlow.self
