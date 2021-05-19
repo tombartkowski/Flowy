@@ -139,13 +139,6 @@ public extension Presentable where Self: UIViewController {
             completion?()
         case let (.navigationController(parent), _, _):
             parent.pushViewController(presentable.viewController, animated: animated)
-            _ = parent.rx.didShow.subscribe { event in
-                if case let Event.next(payload) = event {
-                    if payload.viewController == presentable.viewController {
-                        completion?()
-                    }
-                }
-            }
         default:
             parentPresentable.viewController.present(
                 presentable.viewController,
@@ -167,9 +160,9 @@ public extension Presentable where Self: UIViewController {
                 parent.viewControllers.contains(presentable),
                 parent.viewControllers.count > 1
             {
-                _ = presentable.rx.dismissed.subscribe { _ in
-                    completion?()
-                }
+//                _ = presentable.rx.dismissed.subscribe { _ in
+//                    completion?()
+//                }
                 parent.popViewController(animated: animated)
 
             } else {

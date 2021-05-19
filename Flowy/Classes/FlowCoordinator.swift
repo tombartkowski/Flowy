@@ -21,6 +21,8 @@ class FlowCoordinator {
         self.eventsSource = eventsSource
         self.flowFactory = flowFactory
     }
+    
+    
 
     // MARK: Internal
 
@@ -40,14 +42,18 @@ class FlowCoordinator {
             .compactMap { [weak self] flowEvent in self?.nextFlowCoordinator(for: flowEvent) }
             .withLatestFrom(flow.presentable.rx_visible) { ($0, $1) }
             .filterMap { $0.1 ? .map($0.0) : .ignore }
-            .flatMap { [weak self] nextCoordinator in self?.transition(to: nextCoordinator) ?? .never() }
+            .flatMap { [weak self] nextCoordinator in
+                self?.transition(to: nextCoordinator) ?? .never()
+            }
             .subscribe()
             .disposed(by: disposeBag)
 
         let flowResult = eventsSource.events
             .withLatestFrom(flow.presentable.rx_visible) { ($0, $1) }
             .filterMap { $0.1 ? .map($0.0) : .ignore }
-            .filter { [weak self] event in self?.flow.dismissingEvents.contains { $0.isEqualTo(event) } ?? false }
+            .filter { [weak self] event in
+                self?.flow.dismissingEvents.contains { $0.isEqualTo(event) } ?? false
+            }
             .take(1)
             .do(onNext: { [weak self] _ in try? self?.flow.dismiss() })
             .map { event -> FlowEvent? in event }
@@ -76,12 +82,17 @@ class FlowCoordinator {
                 flowCoordinator.free(childFlowCoordinator)
             }
         }
+        
         childFlowCoordinators[flowCoordinator.identifier] = nil
     }
 
     func coordinator(for flow: Flow) -> FlowCoordinator {
         if let flow = flow as? TabBarFlow {
-            return TabBarFlowCoordinator(flow: flow, eventsSource: eventsSource, flowFactory: flowFactory)
+            return TabBarFlowCoordinator(
+                flow: flow,
+                eventsSource: eventsSource,
+                flowFactory: flowFactory
+            )
         }
         return FlowCoordinator(flow: flow, eventsSource: eventsSource, flowFactory: flowFactory)
     }
@@ -100,7 +111,12 @@ class FlowCoordinator {
         let factoryKey = String(describing: flowType.self) + (flowEvent.transitionKey ?? "")
         guard let flowFactoryClosure = flowFactory[factoryKey] else { return nil }
 
-        let nextFlow = flowFactoryClosure(flow.presentable)
-        return coordinator(for: nextFlow)
+        if let navigationFlow = flow as? NavigationFlow {
+            let nextFlow = flowFactoryClosure(navigationFlow.navigationController)
+            return coordinator(for: nextFlow)
+        } else {
+            let nextFlow = flowFactoryClosure(flow.presentable)
+            return coordinator(for: nextFlow)
+        }
     }
 }
